@@ -8,7 +8,11 @@
         Title="MainWindow" Height="450" Width="800"
         WindowStyle="None"
         Background="Transparent"
-        AllowsTransparency="True">
+        AllowsTransparency="True"
+        Topmost="True"
+        ResizeMode="CanResize"
+        MinHeight="200"
+        MinWidth="400">
     <Border BorderBrush="DimGray" 
             BorderThickness="2" 
             CornerRadius="10"
@@ -18,6 +22,27 @@
             <Grid.Background>
                 <SolidColorBrush Color="#80000000"/>
             </Grid.Background>
+
+            <Label Content="PoE Act Helper" 
+                   Foreground="White" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"
+                   FontSize="24"
+                   FontWeight="Bold"/>
+
+            <!-- Resize Grip -->
+            <Grid HorizontalAlignment="Right" 
+                  VerticalAlignment="Bottom" 
+                  Width="20" 
+                  Height="20"
+                  Background="Transparent"
+                  MouseLeftButtonDown="ResizeGrip_MouseLeftButtonDown"
+                  Cursor="SizeNWSE">
+                <Path Data="M 0,10 L 10,0 M 0,15 L 15,0 M 0,20 L 20,0" 
+                      Stroke="White" 
+                      StrokeThickness="1"
+                      Opacity="0.5"/>
+            </Grid>
         </Grid>
     </Border>
 </Window>
