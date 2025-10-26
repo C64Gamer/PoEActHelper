@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PoEActHelper"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="MainWindow" Height="450" Width="800"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True">
+    <Border BorderBrush="DimGray" 
+            BorderThickness="2" 
+            CornerRadius="10"
+            Background="Transparent"
+            MouseLeftButtonDown="Window_MouseLeftButtonDown">
+        <Grid>
+            <Grid.Background>
+                <SolidColorBrush Color="#80000000"/>
+            </Grid.Background>
+        </Grid>
+    </Border>
 </Window>
